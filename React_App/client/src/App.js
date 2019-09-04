@@ -65,11 +65,11 @@ class App extends Component{
 
 	//our delete method that uses our api
 	//to remove existing data base information
-	deleteFromDb = (idToDelete) => {
-		parseInt(idToDelete);
+	deleteFromDb = (idTodelete) => {
+		idTodelete = parseInt(idTodelete);
 		let objIdToDelete = null;
 		this.state.data.forEach((dat) =>{
-			if(dat.id === idToDelete){
+			if(dat.id === idTodelete){
 				objIdToDelete = dat._id;
 			}
 		});
@@ -85,7 +85,7 @@ class App extends Component{
 	//to overwrite existing data bas einformation
 	updateDB = (idToUpdate, updateToApply) => {
 		let objIdToUpdate = null;
-		parseInt(idToUpdate);
+		idToUpdate = parseInt(idToUpdate);
 		this.state.data.forEach((dat) => {
 			if(dat.id === idToUpdate){
 				objIdToUpdate = dat._id;
